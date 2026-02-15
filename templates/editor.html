@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+        <title>Code Collab</title>
+        <!-- Подключаем CodeMirror через CDN -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/codemirror.min.css">
+        <!-- Тема (можно выбрать любую, например, dracula) -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/theme/dracula.min.css">
+        <!-- Подключаем режимы для языков -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/theme/monokai.min.css">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/codemirror.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/mode/clike/clike.min.js"></script> <!-- для C/C++ -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/mode/python/python.min.js"></script>
+        <link rel="stylesheet" href="/static/css/style.css">
+    </head>
+    <body>
+        <div class="container">
+            <h1>Collab-editor</h1>
+            <div class="toolbar">
+                <select id="language">
+                    <option value="python">Python</option>
+                    <option value="c">C</option>
+                    <option value="c++">C++</option>
+                </select>
+                <button id="run-btn">Запустить код</button>
+            </div>
+
+            <textarea id="code-editor"></textarea>
+
+            <div class="output-label">Вывод</div>
+            <pre id="output" class="output">Здесь будет результат выполнения</pre>
+        </div>
+        <script src="/static/js/script.js"></script>
+    </body>
+</html>
